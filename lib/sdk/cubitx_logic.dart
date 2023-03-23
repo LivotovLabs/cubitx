@@ -11,7 +11,7 @@ abstract class Cubit<S> {
     _state = Rx(onStateComputed(initialState));
 
     for (var dep in dependencies) {
-      _subs.add(dep._state.listen((ds) =>
+      _subs.add(dep._state.listen((_) =>
       {
         _state.value = onStateComputed(_state.value)
       }));

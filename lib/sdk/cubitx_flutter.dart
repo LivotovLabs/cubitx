@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'cubitx-logic.dart';
+import 'cubitx_logic.dart';
 
 abstract class CubitView<C extends Cubit<S>, S> extends StatefulWidget {
   final C controller;
@@ -20,7 +20,7 @@ abstract class CubitView<C extends Cubit<S>, S> extends StatefulWidget {
   Widget onComposeWidget(BuildContext context, S state);
 }
 
-class _CubitViewState<C extends Cubit> extends State<CubitView> {
+class _CubitViewState extends State<CubitView> {
   final Cubit controller;
   final _observer = RxNotifier();
   late StreamSubscription subs;

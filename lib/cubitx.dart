@@ -1,4 +1,4 @@
 library cubitx;
 
-export 'cubitx-logic.dart';
-export 'cubitx-flutter.dart';
+export 'sdk/cubitx_logic.dart';
+export 'sdk/cubitx_flutter.dart';
