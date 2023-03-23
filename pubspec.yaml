@@ -1,0 +1,20 @@
+name: cubitx
+description: Extension over GetX state management, offering support for cubits - an isolated slices of mutable state, encapsulating business logic pertaining to it, providing simpler and cleaner way for building solid app logic and ui blocks.
+version: 0.0.1
+homepage: https://github.com/LivotovLabs/cubitx
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
