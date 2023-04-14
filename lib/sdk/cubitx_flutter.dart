@@ -17,6 +17,7 @@ abstract class CubitView<C extends Cubit<S>, S> extends StatefulWidget {
     return onComposeWidget(context, controller.state());
   }
 
+  void onWidgetMounted();
   Widget onComposeWidget(BuildContext context, S state);
 }
 
@@ -30,8 +31,10 @@ class _CubitViewState extends State<CubitView> {
   @override
   void initState() {
     super.initState();
+    widget.onWidgetMounted();
     subs = _observer.listen(_updateTree, cancelOnError: false);
   }
+
 
   void _updateTree(_) {
     if (mounted) {
